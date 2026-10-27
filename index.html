@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>LolaLive Privacy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Documento legale a colonna singola: testata con lingue, poi sezioni con titoletti; colori dell'icona (blu notte + azzurro neon) */
+:root {
+  --bg: #f4f7fb; --surface: #ffffff; --fg: #10202f; --muted: #50606f; --line: #d7e1ea; --accent: #1f74c4;
+  --display: "Fraunces", Georgia, serif; --body: "Source Sans 3", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #07111d; --surface: #0d1b2b; --fg: #e3edf6; --muted: #9db0c2; --line: #1d3247; --accent: #6cc4ff; color-scheme: dark } }
+:root[data-theme="dark"] { --bg: #07111d; --surface: #0d1b2b; --fg: #e3edf6; --muted: #9db0c2; --line: #1d3247; --accent: #6cc4ff; color-scheme: dark }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 var(--body); padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 40px 64px; }
+main { max-width: 68ch; margin: 0 auto; display: grid; gap: 48px; }
+header { display: grid; gap: 12px; }
+.app { font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+h1 { font-family: var(--display); font-weight: 600; font-size: clamp(1.9rem, 5vw, 2.6rem); line-height: 1.15; margin: 0; text-wrap: balance; }
+h2 { font-family: var(--display); font-weight: 600; font-size: 1.25rem; margin: 0; text-wrap: balance; }
+nav { display: flex; gap: 8px; flex-wrap: wrap; }
+nav a { color: var(--fg); text-decoration: none; border: 1px solid var(--line); border-radius: 999px; padding: 4px 14px; font-size: .9rem; background: var(--surface); }
+nav a:hover, nav a:focus-visible { border-color: var(--accent); outline: none; }
+.meta { color: var(--muted); font-size: .95rem; margin: 0; }
+article { display: grid; gap: 28px; }
+article > h1 { font-size: 1.6rem; padding-top: 8px; border-top: 1px solid var(--line); }
+section { display: grid; gap: 8px; }
+p, ul { margin: 0; }
+ul { padding-left: 1.2em; display: grid; gap: 6px; }
+a { color: var(--accent); }
+strong { font-weight: 600; }
+.summary { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; display: grid; gap: 6px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="app">LolaLive · Android</div>
+    <h1>Informativa privacy / Privacy policy</h1>
+    <nav><a href="#it">Italiano</a><a href="#en">English</a></nav>
+    <p class="meta">Ultimo aggiornamento / Last updated: 27 ottobre 2026 · October 27, 2026</p>
+  </header>
+
+  <article id="it" lang="it">
+    <h1>Italiano</h1>
+    <div class="summary">
+      <p><strong>In breve.</strong> LolaLive non ha account, pubblicità, statistiche d'uso né tracciamenti. Video e audio vanno solo al server di streaming che scegli tu. I tuoi dati restano sul telefono. Gli effetti del viso usano Snap Camera Kit, che scarica le lenti dai server di Snap e invia a Snap dati tecnici sul loro uso.</p>
+    </div>
+
+    <section>
+      <h2>Chi siamo</h2>
+      <p>LolaLive (<code>app.livestudio.cam</code>) è un'app per trasmettere in diretta dalla fotocamera del telefono a piattaforme come Twitch, YouTube, Kick, Stripchat o a un server RTMP a scelta. Sviluppatore e titolare del trattamento: Enrico Attili. Contatto: <span id="contact">eattil@gmail.com</span>.</p>
+    </section>
+
+    <section>
+      <h2>Dati salvati sul telefono</h2>
+      <ul>
+        <li><strong>Profili di streaming</strong>: nome, indirizzo del server, chiave di streaming, sito della piattaforma.</li>
+        <li><strong>Impostazioni</strong>: qualità video, microfono, livelli degli effetti.</li>
+        <li><strong>Storico delle dirette</strong>: data, durata, bitrate, riconnessioni.</li>
+        <li><strong>Registrazioni</strong>, se le attivi: salvate nella galleria del telefono.</li>
+      </ul>
+      <p>Questi dati non vengono inviati a noi né ad altri, e sono esclusi dal backup automatico di Android. Puoi cancellarli eliminando i profili nell'app o disinstallandola.</p>
+    </section>
+
+    <section>
+      <h2>Fotocamera, microfono e altri permessi</h2>
+      <ul>
+        <li><strong>Fotocamera e microfono</strong>: servono per l'anteprima e la diretta. Video e audio vengono inviati solo al server di streaming del profilo scelto, mentre sei in diretta.</li>
+        <li><strong>Bluetooth</strong>: solo per usare un microfono o auricolare Bluetooth.</li>
+        <li><strong>Notifiche</strong>: per mostrare che la diretta è in corso.</li>
+        <li><strong>Rete</strong>: per la diretta, il browser integrato, il test di velocità e il download delle lenti Snap.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Effetti video</h2>
+      <ul>
+        <li><strong>Sfocatura dello sfondo</strong>: calcolata interamente sul telefono con la libreria Google MediaPipe e con modelli inclusi nell'app. Per riconoscere la persona e i capelli l'app analizza i fotogrammi della fotocamera in memoria, senza salvarli e senza inviarli a noi né ad altri. Non usa la rete.</li>
+        <li><strong>Pelle, denti e occhi</strong>: applicati con una lente di Snap Camera Kit, il kit di realtà aumentata di Snap Inc. La lente elabora i fotogrammi della fotocamera e i punti del viso sul telefono; le immagini della fotocamera non vengono salvate né inviate a noi. Camera Kit scarica la lente dai server di Snap e invia a Snap dati tecnici: interazioni con le lenti, dati di diagnostica (arresti e prestazioni) e, come ogni connessione, l'indirizzo IP. Questi dati sono trattati da Snap secondo la sua <a href="https://values.snap.com/privacy/privacy-policy">informativa privacy</a>.</li>
+        <li>Al primo uso delle lenti l'app mostra le <a href="https://snap.com/terms">condizioni di Snap</a> da accettare. Se non le accetti, le lenti restano spente e il resto dell'app funziona normalmente.</li>
+      </ul>
+      <p>Nella diretta va solo il video già elaborato.</p>
+    </section>
+
+    <section>
+      <h2>Servizi di terze parti</h2>
+      <ul>
+        <li><strong>Piattaforme di streaming</strong>. Quello che trasmetti è trattato dalla piattaforma che ricevi (Twitch, YouTube, Kick, Stripchat e altre) secondo le sue regole.</li>
+        <li><strong>Browser integrato e chat</strong>. Le pagine delle piattaforme si aprono in una vista web: i siti visitati possono salvare cookie e ricevere i dati che inserisci, secondo le loro informative.</li>
+        <li><strong>Test di velocità</strong>. Su tua richiesta l'app invia dati casuali a Cloudflare o al CDN della piattaforma per misurare la banda in upload. Il server vede il tuo indirizzo IP.</li>
+        <li><strong>Scansione QR</strong> (Google ML Kit). La lettura del codice avviene sul telefono; ML Kit può inviare a Google dati tecnici anonimi sul funzionamento della libreria.</li>
+        <li><strong>Snap Camera Kit</strong> (Snap Inc.). Lenti per gli effetti del viso, come descritto sopra in "Effetti video".</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Minori</h2>
+      <p>LolaLive non è destinata a persone sotto i 16 anni.</p>
+    </section>
+
+    <section>
+      <h2>I tuoi diritti</h2>
+      <p>Poiché non raccogliamo dati personali sui nostri server, non abbiamo dati tuoi da consultare, correggere o cancellare. Per i dati trattati dalle piattaforme di streaming rivolgiti a loro. Per domande su questa informativa scrivi al contatto indicato sopra.</p>
+    </section>
+
+    <section>
+      <h2>Modifiche</h2>
+      <p>Se l'informativa cambia, aggiorniamo questa pagina e la data in alto.</p>
+    </section>
+  </article>
+
+  <article id="en" lang="en">
+    <h1>English</h1>
+    <div class="summary">
+      <p><strong>Summary.</strong> LolaLive has no accounts, ads, usage analytics or tracking. Video and audio go only to the streaming server you choose. Your data stays on your phone. Face effects use Snap Camera Kit, which downloads lenses from Snap's servers and sends Snap technical data about their use.</p>
+    </div>
+
+    <section>
+      <h2>Who we are</h2>
+      <p>LolaLive (<code>app.livestudio.cam</code>) is an app for live streaming from your phone's camera to platforms such as Twitch, YouTube, Kick, Stripchat or any RTMP server you choose. Developer and data controller: Enrico Attili. Contact: <span>eattil@gmail.com</span>.</p>
+    </section>
+
+    <section>
+      <h2>Data stored on your phone</h2>
+      <ul>
+        <li><strong>Streaming profiles</strong>: name, server address, stream key, platform website.</li>
+        <li><strong>Settings</strong>: video quality, microphone, effect levels.</li>
+        <li><strong>Stream history</strong>: date, duration, bitrate, reconnections.</li>
+        <li><strong>Recordings</strong>, if you turn them on: saved to your phone's gallery.</li>
+      </ul>
+      <p>This data is not sent to us or anyone else, and it is excluded from Android's automatic backup. You can delete it by removing profiles in the app or by uninstalling it.</p>
+    </section>
+
+    <section>
+      <h2>Camera, microphone and other permissions</h2>
+      <ul>
+        <li><strong>Camera and microphone</strong>: used for the preview and the live stream. Video and audio are sent only to the streaming server of the selected profile, while you are live.</li>
+        <li><strong>Bluetooth</strong>: only to use a Bluetooth microphone or headset.</li>
+        <li><strong>Notifications</strong>: to show that a stream is running.</li>
+        <li><strong>Network</strong>: for streaming, the built-in browser, the speed test and downloading Snap lenses.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Video effects</h2>
+      <ul>
+        <li><strong>Background blur</strong>: computed entirely on the phone with Google's MediaPipe library and models bundled with the app. To detect the person and the hair, the app analyses camera frames in memory, without saving them or sending them to us or anyone else. It does not use the network.</li>
+        <li><strong>Skin, teeth and eyes</strong>: applied with a lens from Snap Camera Kit, the augmented reality kit by Snap Inc. The lens processes camera frames and face landmarks on the phone; camera images are not saved or sent to us. Camera Kit downloads the lens from Snap's servers and sends Snap technical data: lens interactions, diagnostics (crashes and performance) and, as with any connection, your IP address. Snap handles this data under its <a href="https://values.snap.com/privacy/privacy-policy">privacy policy</a>.</li>
+        <li>The first time lenses are used, the app shows <a href="https://snap.com/terms">Snap's terms</a> for you to accept. If you decline, lenses stay off and the rest of the app works normally.</li>
+      </ul>
+      <p>Only the processed video goes into the stream.</p>
+    </section>
+
+    <section>
+      <h2>Third-party services</h2>
+      <ul>
+        <li><strong>Streaming platforms</strong>. What you broadcast is handled by the receiving platform (Twitch, YouTube, Kick, Stripchat and others) under its own terms.</li>
+        <li><strong>Built-in browser and chat</strong>. Platform pages open in a web view: the sites you visit may store cookies and receive the data you enter, under their own policies.</li>
+        <li><strong>Speed test</strong>. When you ask for it, the app uploads random data to Cloudflare or the platform's CDN to measure upload bandwidth. The server sees your IP address.</li>
+        <li><strong>QR scanning</strong> (Google ML Kit). Codes are read on the device; ML Kit may send Google anonymous technical data about how the library performs.</li>
+        <li><strong>Snap Camera Kit</strong> (Snap Inc.). Lenses for the face effects, as described above under "Video effects".</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Children</h2>
+      <p>LolaLive is not intended for anyone under 16.</p>
+    </section>
+
+    <section>
+      <h2>Your rights</h2>
+      <p>Because we collect no personal data on our servers, we hold no data of yours to access, correct or delete. For data handled by the streaming platforms, contact them. For questions about this policy, use the contact above.</p>
+    </section>
+
+    <section>
+      <h2>Changes</h2>
+      <p>If this policy changes, we will update this page and the date at the top.</p>
+    </section>
+  </article>
+</main>
+</body>
+</html>
